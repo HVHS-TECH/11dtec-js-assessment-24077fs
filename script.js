@@ -1,7 +1,7 @@
 /****************************
 Js Assessment Finn Seiler
 ****************************/
-const OUTPUT = document.getElementById("s4");
+
 
 
 
@@ -14,10 +14,12 @@ Constants
 
 
 
-function Product(_name, _price){
-    PROOUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
+function displayProduct(ID,_name, _price){
+   const LISTID =  document.getElementById(ID)
+   LISTID.innerHTML +=  "<li>" + _name + " - $" + _price + "</li>";
+
+
 }
 
 
-Product("Bread", 2.99);
-
+displayProduct("s4","Eggs",5.99)

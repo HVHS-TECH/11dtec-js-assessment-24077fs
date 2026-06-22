@@ -8,7 +8,7 @@ h1 {
   font-size: 60px;
 }
 html{
-background-color: #29524a;
+background-color: #a67949;
 }
 .container {
   display: grid;
@@ -16,7 +16,7 @@ background-color: #29524a;
   grid-template-rows:auto auto auto auto auto auto auto auto auto auto auto; 
 }
 .container div {
-  background-color: #29524a;
+  background-color: #a67949;
 }
 #nav1{
     
