@@ -28,7 +28,12 @@ background-color: #a67949;
     border-radius: 1%;
     border-width: 5px;
 }
-
+#nav2{border-radius: 1%;
+   
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+}
 #nav3{border-radius: 1%;
    
     grid-column-start: 3;
@@ -41,6 +46,10 @@ background-color: #a67949;
 }
 #nav{
   text-decoration: none;
+}
+#middletext{
+  font-weight:bolder;
+  text-align: center;
 }
 #titletext1{
   font-size: 250px;
