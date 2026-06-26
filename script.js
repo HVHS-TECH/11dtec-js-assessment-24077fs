@@ -16,12 +16,10 @@ Constants
 
 function displayProduct(ID,_name, _price){
    const LISTID =  document.getElementById(ID)
-   LISTID.innerHTML +=  "<li>" + _name + " - $" + _price + "</li>";
+   LISTID.innerHTML +=  "<li>" + _name + " - $" + _price + "<button>Order Now!</button>" + "</li>";
 
 
 }
-
-console.log(document.getElementById("s4"));
 
 displayProduct("s4","Pizza",4.99)
 displayProduct("s4","Pasta",4.99)
