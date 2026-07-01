@@ -10,7 +10,7 @@ console.log("Running Pristine Cuisine")
 Constants
 ****************************/
 
-
+var receiptArray = ["Reciept",];
 
 const items = [];
 
@@ -22,7 +22,7 @@ function displayProduct(ID,name, price){
    
    
    const LISTID =  document.getElementById(ID)
-   LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button>Order Now!</button>" + "</li>";
+   LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button onClick=\"getproduct('" + name + "', " + price + ")\" >Order Now!</button>" + "</li>";
 
 
 }
@@ -68,6 +68,13 @@ displayProduct("s14","Moussaka",4.99)
 displayProduct("s14","Tzatziki",4.99)
 
 
+function getproduct(name, price){
+receiptArray.push({
+   name:name,
+   price:price
+}) 
+   console.log(receiptArray);
+}
 
 
 function getFormInput(){
