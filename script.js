@@ -22,7 +22,7 @@ function displayProduct(ID,name, price){
    
    
    const LISTID =  document.getElementById(ID)
-   LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button onClick=\"getproduct('" + name + "', " + price + ")\" >Order Now!</button>" + "</li>";
+   LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button onClick=\"getProduct('" + name + "', " + price + ")\" >Order Now!</button>" + "</li>";
 
 
 }
@@ -68,7 +68,7 @@ displayProduct("s14","Moussaka",4.99)
 displayProduct("s14","Tzatziki",4.99)
 
 
-function getproduct(name, price){
+function getProduct(name, price){
 receiptArray.push({
    name:name,
    price:price
@@ -86,3 +86,146 @@ function getFormInput(){
 
 
 console.log(items);
+/****************************
+#s4{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:3 ;
+  grid-row-end:4 ; 
+
+}
+#s4s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:3 ;
+  grid-row-end:4 ; 
+
+}
+#s5{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:5 ;
+  grid-row-end:6 ; 
+
+}
+#s5s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:5 ;
+  grid-row-end:6 ; 
+
+}
+#s6{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:6 ;
+  grid-row-end:7 ; 
+
+}
+#s6s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:6 ;
+  grid-row-end:7 ; 
+
+}
+#s7{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:7 ;
+  grid-row-end:8 ; 
+
+}
+#s7s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:7 ;
+  grid-row-end:8 ; 
+
+}
+#s9{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:9 ;
+  grid-row-end:10 ; 
+
+}
+#s9s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:9 ;
+  grid-row-end:10 ; 
+
+}
+#s10{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:10 ;
+  grid-row-end:11 ; 
+
+}
+#s10s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:10 ;
+  grid-row-end:11 ; 
+
+}
+#s11{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:11 ;
+  grid-row-end:12 ; 
+
+}
+#s11s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:11 ;
+  grid-row-end:12 ; 
+
+}
+#s12{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:12 ;
+  grid-row-end:13 ; 
+
+}
+#s12s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:12 ;
+  grid-row-end:13 ; 
+
+}
+#s13{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:13 ;
+  grid-row-end:14 ; 
+
+}
+#s13s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:13 ;
+  grid-row-end:14 ; 
+
+}
+#s14{
+  grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:14 ;
+  grid-row-end:15 ; 
+
+}
+#s14s {
+  grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:14 ;
+  grid-row-end:15 ; 
+
+}
+
+****************************/
