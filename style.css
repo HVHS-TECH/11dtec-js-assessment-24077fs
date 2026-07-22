@@ -13,7 +13,7 @@ background-color: #a67949;
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows:auto auto auto auto auto auto auto auto auto auto auto; 
+  grid-template-rows:auto auto auto auto auto; 
 }
 .container div {
   background-color: #a67949;
@@ -28,16 +28,8 @@ background-color: #a67949;
     border-radius: 1%;
     border-width: 5px;
 }
-#nav2{border-radius: 1%;
-   
-    grid-column-start: 2;
-    grid-column-end: 3;
-    text-align: center;
-    border-style:outset;
-    border-color: #999999;
-    border-radius: 1%;
-     border-width: 5px;
-}
+
+
 #nav3{border-radius: 1%;
    
     grid-column-start: 3;
@@ -88,12 +80,27 @@ background-color: #a67949;
   grid-column-end:4 ;
   grid-row-start:2 ;
   grid-row-end:3 ;
-
 }
 #s1s{
   grid-column-start:1 ;
   grid-column-end:4 ;
-  grid-row-start:2 ;
-  grid-row-end:3 ;
+  grid-row-start:3 ;
+  grid-row-end:4 ;
+  text-align: right;
+
+}
+
+#s2{
+    grid-column-start:1 ;
+  grid-column-end:3 ;
+  grid-row-start:4 ;
+  grid-row-end:5 ;
+  text-align: right;
+}
+#s2s{
+    grid-column-start:3 ;
+  grid-column-end:4 ;
+  grid-row-start:4 ;
+  grid-row-end:5 ;
   text-align: right;
 }
