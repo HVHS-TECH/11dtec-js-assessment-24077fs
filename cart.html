@@ -1,55 +1,56 @@
-<!DOCTYPE html>
-<div class="container" >
-<html>
-<head>
-<title>Pristine Cuisine</title>
-<link rel="icon" type="image/png" href="Images/Ship.png">
-<link href="style.css" rel="stylesheet">
-</head>
+    <!DOCTYPE html>
+    <html>
+  
+    <head>
+    <title>Pristine Cuisine</title>
+    <link rel="icon" type="image/png" href="Images/Ship.png">
+    <link href="style.css" rel="stylesheet">
+    </head>
 
-<header>
+    <header>
+        
+
+    </header>
+
+    <body>
+    <div class="container" >
+    <div id="nav1" onclick="window.location.href='index.html'" >
+        <a id="nav" >Home</a>
+    </div>
+
+    <div id="nav3" onclick="window.location.href='cart.html'" >
+        <a id="nav"  >Cart</a>
+    </div>       
+    <div id="s1"><h1 id="titletext2">Pristine Cuisine</h1><br></div>
     
 
-</header>
+    
+    <form onsubmit="return false;">
+    <label for="formName"></label>
 
-<body>
- <div id="nav1" onclick="window.location.href='index.html'" >
-     <a id="nav" >Home</a>
- </div>
+    <input type="text" id="nameField" name="formName" placeholder="Name">
+    <br>
+    <input type="number" id="moneyField" name="formName" placeholder="Money">
 
- <div id="nav3" onclick="window.location.href='cart.html'" >
-     <a id="nav"  >Cart</a>
- </div>       
-<div id="s1"><h1 id="titletext2">Pristine Cuisine</h1><br></div>
- 
+    <input type="submit" onClick=getFormInput()>
+    </form>
+    <p></p>
+    
+    <div id="s1s"><br><ul>
 
-   
- <form onsubmit="return false;">
-  <label for="formName"></label>
+    </ul>
+    <p id="Output">hello</p>
+    </div>
 
-  <input type="text" id="nameField" name="formName" placeholder="Name">
-  <br>
-  <input type="number" id="moneyField" name="formName" placeholder="Money">
-
- <input type="submit" onClick=getFormInput()>
- </form>
- <p></p>
- </ul></div>
-  <div id="s1s"><br><ul>
-
- </ul>
-<p>hello</p>
-</div>
-
-<div><p></p></div>
+    <div><p></p></div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    </div>
+    </body>
 
-</body>
+    <footer>
 
-<footer>
+    </footer>
 
-</footer>
-</html>
-</div>
+    </html>

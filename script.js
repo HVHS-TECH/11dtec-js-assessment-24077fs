@@ -3,6 +3,7 @@ Js Assessment Finn Seiler
 ****************************/
 
 const OUTPUT = document.getElementById("Output");
+console.log(OUTPUT);
 
 
 console.log("Running Pristine Cuisine")
@@ -10,22 +11,35 @@ console.log("Running Pristine Cuisine")
 Constants
 ****************************/
 
-var receiptArray = ["Reciept",];
+var receiptArray = JSON.parse(localStorage.getItem("cart")) || [];
 
 const items = [];
 
 function displayProduct(ID,name, price){
-   items.push({
-   name: name,
-   price: price
-   });
+  const LISTID =  document.getElementById(ID)
+   if(!LISTID){
+    return;
+   }
+
    
-   
-   const LISTID =  document.getElementById(ID)
    LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button onClick=\"getProduct('" + name + "', " + price + ")\" >Order Now!</button>" + "</li>";
 
-
 }
+
+if (OUTPUT) {
+
+    OUTPUT.innerHTML = "<h2>Receipt</h2>";
+
+    for (var i = 0; i < receiptArray.length; i++) {
+
+        OUTPUT.innerHTML +=
+            receiptArray[i].name +
+            " - $" +
+            receiptArray[i].price +
+            "<br>";
+    }
+}
+
 
 displayProduct("s4","Pizza",4.99)
 displayProduct("s4","Pasta",4.99)
@@ -70,9 +84,13 @@ displayProduct("s14","Tzatziki",4.99)
 
 function getProduct(name, price){
 receiptArray.push({
-   name:name,
-   price:price
-}) 
+   name: name,
+   price: price
+   });
+   console.log(receiptArray);
+   localStorage.setItem("cart", JSON.stringify(receiptArray));
+
+
    console.log(receiptArray);
 }
 
@@ -86,146 +104,3 @@ function getFormInput(){
 
 
 console.log(items);
-/****************************
-#s4{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:3 ;
-  grid-row-end:4 ; 
-
-}
-#s4s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:3 ;
-  grid-row-end:4 ; 
-
-}
-#s5{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:5 ;
-  grid-row-end:6 ; 
-
-}
-#s5s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:5 ;
-  grid-row-end:6 ; 
-
-}
-#s6{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:6 ;
-  grid-row-end:7 ; 
-
-}
-#s6s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:6 ;
-  grid-row-end:7 ; 
-
-}
-#s7{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:7 ;
-  grid-row-end:8 ; 
-
-}
-#s7s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:7 ;
-  grid-row-end:8 ; 
-
-}
-#s9{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:9 ;
-  grid-row-end:10 ; 
-
-}
-#s9s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:9 ;
-  grid-row-end:10 ; 
-
-}
-#s10{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:10 ;
-  grid-row-end:11 ; 
-
-}
-#s10s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:10 ;
-  grid-row-end:11 ; 
-
-}
-#s11{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:11 ;
-  grid-row-end:12 ; 
-
-}
-#s11s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:11 ;
-  grid-row-end:12 ; 
-
-}
-#s12{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:12 ;
-  grid-row-end:13 ; 
-
-}
-#s12s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:12 ;
-  grid-row-end:13 ; 
-
-}
-#s13{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:13 ;
-  grid-row-end:14 ; 
-
-}
-#s13s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:13 ;
-  grid-row-end:14 ; 
-
-}
-#s14{
-  grid-column-start:1 ;
-  grid-column-end:3 ;
-  grid-row-start:14 ;
-  grid-row-end:15 ; 
-
-}
-#s14s {
-  grid-column-start:3 ;
-  grid-column-end:4 ;
-  grid-row-start:14 ;
-  grid-row-end:15 ; 
-
-}
-
-****************************/
