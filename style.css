@@ -7,6 +7,10 @@ header {
 h1 {
   font-size: 60px;
 }
+button{
+  max-height: 100px;
+  max-width: 100px;
+}
 html{
 background-color: #a67949;
 }
@@ -99,7 +103,7 @@ background-color: #a67949;
   grid-column-end:3 ;
   grid-row-start:4 ;
   grid-row-end:5 ;
-  text-align: right;
+
 }
 #s2s{
     grid-column-start:3 ;
