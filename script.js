@@ -5,6 +5,7 @@ Js Assessment Finn Seiler
 const OUTPUT = document.getElementById("Output");
 console.log(OUTPUT);
 
+const items = [];
 
 console.log("Running Pristine Cuisine")
 /****************************
@@ -13,7 +14,10 @@ Constants
 
 var receiptArray = JSON.parse(localStorage.getItem("cart")) || [];
 
-const items = [];
+
+
+
+
 
 function displayProduct(ID,name, price){
   const LISTID =  document.getElementById(ID)
@@ -27,9 +31,6 @@ function displayProduct(ID,name, price){
 }
 
 if (OUTPUT) {
-
-    OUTPUT.innerHTML = "<h2>Receipt</h2>";
-
     for (var i = 0; i < receiptArray.length; i++) {
 
         OUTPUT.innerHTML +=
@@ -39,6 +40,8 @@ if (OUTPUT) {
             "<br>";
     }
 }
+
+
 
 
 displayProduct("s4","Pizza",4.99)
@@ -95,11 +98,37 @@ receiptArray.push({
 }
 
 
+
+
+
 function getFormInput(){
 
    const NAME_FIELD = document.getElementById("nameField");
-  var userName = NAME_FIELD.value;
-  OUTPUT.innerHTML = "<p>Hello " + userName + "</p>";
+   const MONEY_FIELD = document.getElementById("moneyField");
+
+   var userName = NAME_FIELD.value
+   var userMoney = Number(MONEY_FIELD.value);
+
+   var total = 0;
+
+  
+  for (var i = 0; i <receiptArray.length; i++){
+    total += receiptArray[i].price;
+}
+
+var change = userMoney - total;
+
+
+console.log(total);
+
+OUTPUT.innerHTML =+
+ "<h2>Hello " + userName + "</h2>" +
+"<p>Total: $" + total.toFixed(2) + "</p>" +
+"<p>Money: $" + userMoney.toFixed(2) + "</p>" +
+"<p>Change: $" + change.toFixed(2) + "</p>";
+
+
+
 }
 
 
