@@ -15,17 +15,12 @@
     var receiptArray = JSON.parse(localStorage.getItem("cart")) || [];
 
 
-
-
-
-
     function displayProduct(ID,name, price){
     const LISTID =  document.getElementById(ID)
     if(!LISTID){
         return;
     }
 
-    
     LISTID.innerHTML +=  "<li>" + name + " - $" + price + "<button onClick=\"getProduct('" + name + "', " + price + ")\" >Order Now!</button>" + "</li>";
 
     }
@@ -93,7 +88,6 @@
     console.log(receiptArray);
     localStorage.setItem("cart", JSON.stringify(receiptArray));
 
-
     console.log(receiptArray);
     
     }
@@ -103,7 +97,6 @@
         localStorage.removeItem("cart");
         OUTPUT.innerHTML = "<h2>Receipt</h2>";
         console.log("Cart Cleared")
-
     }
 
 
@@ -119,8 +112,6 @@
 
     var total = 0;
 
-
-
     for (var i = 0; i < receiptArray.length; i++){
 
     OUTPUT.innerHTML +=
@@ -132,7 +123,17 @@
         total += receiptArray[i].price;
     }
 
+    if (total > userMoney){
+    OUTPUT.innerHTML +="<h2>Hello " + userName + "</h2>" 
+    OUTPUT.innerHTML += "<p>You fucking fool how dare you not enter enough money to pay for this amazing food that was manufacturered by the goblins of thee depths of the waiwhetu gold mine.</p>"
+
+    } else {
+
     var change = userMoney - total;
+
+    }
+
+
 
 
     console.log(total);
@@ -146,6 +147,3 @@
 
 
     }
-
-
-    console.log(items);
