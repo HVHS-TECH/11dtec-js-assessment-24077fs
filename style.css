@@ -27,6 +27,7 @@ background-color: #a67949;
     border-color: #999999;
     border-radius: 1%;
     border-width: 5px;
+    width: 100px;
 }
 
 
@@ -38,7 +39,10 @@ background-color: #a67949;
     border-style:outset;
     border-color: #999999;
     border-radius: 1%;
-     border-width: 5px;
+    border-width: 5px;
+    width: 100px;
+    justify-self:end;
+    
 }
 #nav{
   text-decoration: none;
