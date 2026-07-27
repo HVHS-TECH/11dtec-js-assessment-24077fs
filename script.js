@@ -89,7 +89,7 @@
     OUTPUT.innerHTML += 
     "<h2>Hello " + userName + "</h2>" +
     "<p>Total: $" + total.toFixed(2) + "</p>" +
-    "<p>Money: $" + userMoney.toFixed(2) + "</p>" +
+    "<p>Money: $" + userMoney + "</p>" +
     "<p>Change: $" + change.toFixed(2) + "</p>";
     }
 
